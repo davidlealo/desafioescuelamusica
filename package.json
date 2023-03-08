@@ -1,0 +1,26 @@
+{
+  "name": "desafioescuelamusica",
+  "version": "1.0.0",
+  "description": "Desafio de Introducción Express JS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlealo/desafioescuelamusica.git"
+  },
+  "author": "David Leal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlealo/desafioescuelamusica/issues"
+  },
+  "homepage": "https://github.com/davidlealo/desafioescuelamusica#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}

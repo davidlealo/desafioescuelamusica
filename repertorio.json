@@ -1,0 +1,27 @@
+[
+    {},
+    {
+        "id": 5700,
+        "titulo": "A dios le pido",
+        "artista": "Juanes",
+        "tono": "Em"
+    },
+    {
+        "id": 7479,
+        "titulo": "Tu falta de querer",
+        "artista": "Mon Laferte",
+        "tono": "Em"
+    },
+    {
+        "id": "1",
+        "cancion": "cancion 1",
+        "artista": "artista 1",
+        "tono": "Am"
+    },
+    {
+        "id": 1234,
+        "titulo": "Testtt",
+        "artista": "Metallica",
+        "tono": "Am"
+    }
+]
