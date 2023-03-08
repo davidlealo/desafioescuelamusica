@@ -33,3 +33,24 @@ app.get('/canciones', (req, res) =>{
     //Enviar contenido JSON a ruta /canciones
     res.send(songs)
 })
+
+app.put('/canciones/:id', (req, res) =>{
+    //Usar params con ID
+    const {id} = req.params
+
+    //Identificar la canción a modificar
+    const song = req.body
+    
+    //Leer el archivo 
+    const songs = JSON.parse(fs.readFileSync('repertorio.json', 'utf8'))
+
+    //Buscar el registro
+    const index = songs.findIndex(s => s.id == id)
+    songs[index] = song
+
+    //Sobre escribir el archivo
+    fs.writeFileSync('repertorio.json', JSON.stringify(songs))
+
+    //Enviar notificación al servidor
+    res.send('Canción modificada de forma exitosa')
+})
