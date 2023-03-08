@@ -26,3 +26,10 @@ app.post('/canciones', (req, res) =>{
     res.send('Nuevo registro creado')
 } )
 
+app.get('/canciones', (req, res) =>{
+    //Leer archivo JSON
+    const songs = JSON.parse(fs.readFileSync('repertorio.json', 'utf8'))
+    
+    //Enviar contenido JSON a ruta /canciones
+    res.send(songs)
+})
