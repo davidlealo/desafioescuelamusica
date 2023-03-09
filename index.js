@@ -54,3 +54,22 @@ app.put('/canciones/:id', (req, res) =>{
     //Enviar notificación al servidor
     res.send('Canción modificada de forma exitosa')
 })
+
+app.delete('/canciones/:id', (req, res) =>{
+    // Usar params ID
+    const {id} = req.params
+
+    //Leer el archivo 
+    const songs = JSON.parse(fs.readFileSync('repertorio.json', 'utf8'))
+
+    //Buscar la canción a eliminar
+    const index = songs.findIndex(s => s.id == id)
+    songs.splice(index, 1)
+    
+    //Sobre escribo el archivo
+    fs.writeFileSync('repertorio.json', JSON.stringify(songs))
+
+    //Enviar notificación al servidor
+    res.send('Canción eliminada de forma exitosa')
+
+})
